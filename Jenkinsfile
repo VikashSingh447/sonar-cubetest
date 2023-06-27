@@ -3,7 +3,7 @@ pipeline {
     stages { 
       stage('checkout SCM') {
         steps {
-          bat "git clone https://github.com/Vikashsingh447/sonar-cubetest.git"
+          bat "git pull https://github.com/Vikashsingh447/sonar-cubetest.git"
           }
       }
       stage('package') {
