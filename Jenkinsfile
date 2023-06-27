@@ -1,9 +1,32 @@
-podTemplate(containers: [containerTemplate(name: 'maven', image: 'maven', command: 'sleep', args: 'infinity')]) {
-  node(POD_LABEL) {
-    checkout scm
-    container('maven') {
-      sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
-    }
-    junit '**/target/surefire-reports/TEST-*.xml'
+pipeline {
+    agent any
+    stages { 
+      stage('checkout SCM') {
+        steps {
+          bat "git pull https://github.com/srinivas-0/maven.git"
+          }
+      }
+      stage('package') {
+        steps {
+          bat "mvn clean package"
+        }
+      }
+      stage('Static Analysis') {
+        steps {
+          withSonarQubeEnv('sonarqube') {
+            bat "mvn sonar:sonar -Dsonar.projectKey=sample-demo"
+          }
+        }
+      }
+      stage('test') {
+        steps {
+          bat "mvn clean test"
+        }
+      }
+      stage('install') {
+        steps {
+          bat "mvn clean install"
+        }
+      }
   }
 }
