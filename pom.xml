@@ -5,6 +5,10 @@
   <artifactId>test</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+  <properties>
+   <maven.compiler.source>16</maven.compiler.source>
+   <maven.compiler.target>16</maven.compiler.target>
+   </properties>
   <name>test</name>
   <url>http://maven.apache.org</url>
   <dependencies>
