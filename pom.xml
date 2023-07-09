@@ -18,6 +18,11 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-site-plugin</artifactId>
+      <version>4.0.0.0-M1</version>
+  </dependency>
   </dependencies>
 
   <build>
@@ -33,13 +38,6 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.11.0</version>
-        </plugin> 
-        
-        
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>4.0.0.0-M1</version>
         </plugin> 
 
           <plugin>
