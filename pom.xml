@@ -53,12 +53,7 @@
       <version>3.4.1.1168</version>
       </dependency>
   </dependencies>
-  <distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8087/nexus/content/repositories/snapshots</url>
-   </snapshotRepository>
-  </distributionManagement>
+
 
   <build>
     <pluginManagement>
