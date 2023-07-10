@@ -18,11 +18,13 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-site-plugin</artifactId>
-      <version>4.0.0.0-M1</version>
-  </dependency>
+      <version>4.0.0-M1</version>
+    </dependency>
+
   </dependencies>
 
   <build>
