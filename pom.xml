@@ -53,6 +53,13 @@
       <version>3.4.1.1168</version>
       </dependency>
   </dependencies>
+  
+  <distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://http://localhost:8087/#admin/repository/repositories:maven-snapshots</url>
+   </snapshotRepository>
+  </distributionManagement>
 
 
   <build>
