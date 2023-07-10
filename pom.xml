@@ -54,11 +54,19 @@
       </dependency>
   </dependencies>
   
-  <distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8087/#admin/repository/repositories:maven-snapshots</url>
-   </snapshotRepository>
+<distributionManagement>
+
+    <repository>
+		  <id>devopstest</id>
+		  <name>Internal Releases</name>
+		  <url>http://0.0.0.0:8087/repository/devopstest-hosted-release/</url>
+	  </repository>
+ 
+	  <snapshotRepository>
+		  <id>devopstest</id>
+		  <name>Internal Releases</name>
+		  <url>http://0.0.0.0:8087/repository/devopstest-hosted-snapshot/</url>
+	  </snapshotRepository>
   </distributionManagement>
 
 
