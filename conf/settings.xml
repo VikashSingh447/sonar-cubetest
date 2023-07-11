@@ -3,9 +3,11 @@
     <pluginGroups>
         <pluginGroup>org.apache.tomcat.maven</pluginGroup>
     </pluginGroups>
-  <server>
+       <servers>
+	<server>
 	<id>devopstest</id>
 	<username>deploy-user</username>
 	<password>user@123</password>
-</server>
+     </server>
+    </servers>
 </settings>
